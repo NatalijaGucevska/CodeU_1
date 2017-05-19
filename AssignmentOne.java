@@ -21,6 +21,18 @@ public class AssignmentOne {
 		System.out.println("Expected 4, returned " + list.kToLast(1));
         // k > size of the list, the value of the head should be printed		
 		System.out.println("Expected 1, returned " + list.kToLast(6));
-	}
 	
+		Q1 q1 = new Q1();
+		
+		System.out.println("Expected false, returned " + q1.isPermutation(null, null));
+		System.out.println("Expected false, returned " + q1.isPermutation("", null));
+		System.out.println("Expected false, returned " + q1.isPermutation(null, "HelLo"));
+		System.out.println("Expected false, returned " + q1.isPermutation("Hello", "Helo"));
+		System.out.println("Expected true, returned " + q1.isPermutation("Hello", "HelLo"));
+    System.out.println("Expected false, returned " + q1.isPermutation("Hi", "hellorr"));
+    System.out.println("Expected true, returned " + q1.isPermutation("", ""));
+    System.out.println("Expected true, returned " + q1.isPermutation("Hello", "elloh"));
+
+	}
+
 }
