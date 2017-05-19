@@ -23,20 +23,16 @@ public class Q1 {
 		}
 		
 		//Test if it is palindrome
-		int usedLetters = 0;
 		for(int i=0; i < lowerSecond.length(); i++) {
 			char c = lowerSecond.charAt(i);
 			int val = occurrences.getOrDefault(c, 0);
 			if(val <= 0) {
 				return false;
 			} else {
-				if(val == 1) {
-					usedLetters++;
-				}
 				occurrences.put(c, val - 1);	
 			}
 		}
 		
-		return usedLetters == occurrences.size();
+		return true;
 	}
 }
