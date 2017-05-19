@@ -14,16 +14,16 @@ public class AssignmentOne {
 			System.out.println(e.getMessage());
 		}
 		
-	    // The final linked list is 5->4->3->2->1
+	    // The final linked list is 1->2->3->4->5
 		list.add(1);
 		list.add(2);
 		list.add(3);
 		list.add(4);
 		list.add(5);
 		
-		System.out.println("Expected 2, returned " + list.kToLast(1));
+		System.out.println("Expected 4, returned " + list.kToLast(1));
         // k > size of the list, the value of the head should be printed		
-		System.out.println("Expected 5, returned " + list.kToLast(6));
+		System.out.println("Expected 1, returned " + list.kToLast(6));
 	}
 	
 }
