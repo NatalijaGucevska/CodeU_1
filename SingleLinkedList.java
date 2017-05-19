@@ -20,7 +20,7 @@ public class SingleLinkedList<T> {
 		} else if (head == null) {
 			throw new IllegalArgumentException("The linked list is empty");
 		} else if (head.getNext() == null) {
-			return head.geVal();
+			return head.getVal();
 		}
 
 		Node last = head;
@@ -38,7 +38,7 @@ public class SingleLinkedList<T> {
 			kLast = kLast.getNext();
 		}
 
-		return kLast.geVal();
+		return kLast.getVal();
 	}
 	
 	class Node {
@@ -54,7 +54,7 @@ public class SingleLinkedList<T> {
 			return this.next;
 		}
 
-		T geVal() {
+		T getVal() {
 			return this.val;
 		}
 	}
