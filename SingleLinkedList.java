@@ -35,13 +35,13 @@ public class SingleLinkedList<T> {
 		Node kLast = head;
 
 		for (int i = 0; i < k; i++) {
-			last = last.next;
-			if (last.getNext() == null) {
-				return kLast.val;
+			last = last.getNext();
+			if (!last.hasNext()) {
+				return kLast.getVal();
 			}
 		}
 
-		while (last.next != null) {
+		while (last.hasNext()) {
 			last = last.getNext();
 			kLast = kLast.getNext();
 		}
@@ -61,7 +61,15 @@ public class SingleLinkedList<T> {
 		Node getNext() {
 			return this.next;
 		}
-
+		
+		void setNext(T val) {
+			this.next = new Node(val); 
+		}
+		
+		boolean hasNext() {
+			return this.next != null; 
+		}
+		
 		T getVal() {
 			return this.val;
 		}
