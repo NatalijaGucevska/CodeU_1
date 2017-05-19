@@ -6,7 +6,15 @@ public class SingleLinkedList<T> {
 	}
 
 	public void add(T val) {
-		head = new Node(val, head);
+		if(head == null) {
+			head = new Node(val);
+		} else {
+			Node currNode = head; 
+			while(currNode.hasNext()) {
+				currNode = currNode.getNext(); 
+			}
+			currNode.setNext(val);
+		}
 	}
 
 	/**
@@ -45,9 +53,9 @@ public class SingleLinkedList<T> {
 		T val;
 		Node next;
 
-		public Node(T val, Node next) {
+		public Node(T val) {
 			this.val = val;
-			this.next = next;
+			this.next = null;
 		}
 
 		Node getNext() {
