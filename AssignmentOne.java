@@ -1,6 +1,3 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-
 public class AssignmentOne {
 
 	public static void main(String[] args) {

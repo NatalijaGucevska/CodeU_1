@@ -1,19 +1,19 @@
 public class SingleLinkedList<T> {
 	Node head;
+	Node last; 
 
 	public SingleLinkedList() {
 		this.head = null;
+		this.last = head; 
 	}
 
 	public void add(T val) {
 		if(head == null) {
 			head = new Node(val);
+			last = head; 
 		} else {
-			Node currNode = head; 
-			while(currNode.hasNext()) {
-				currNode = currNode.getNext(); 
-			}
-			currNode.setNext(val);
+			last.setNext(val);
+			last = last.getNext();
 		}
 	}
 
